@@ -51,16 +51,13 @@ def voice_traffic_analyzer():
                     peer_match = re.search(r'P(\d+)', line)
                     peer_no = peer_match.group(1) if peer_match else "N/A"
 
-                    # Brief haritasından bilgileri al
                     info = call_info_map.get(cid, {'time': "00:00:00", 'status': "ACTIVE"})
-
                     call_data[cid] = {
                         'number': peer_no,
                         'time': info['time'],
                         'status': info['status']
                     }
 
-            # 3. Akıllı Eşleştirme (Atlama yapan ID'leri yakalayan mantık)
             processed = set()
             sorted_ids = sorted(call_data.keys())
             date_today = datetime.now().strftime("%d.%m.%Y")
@@ -70,11 +67,9 @@ def voice_traffic_analyzer():
                 if cid in processed:
                     continue
 
-                # Sadece n+1 değil, bir sonraki uygun ID'ye bak (atlamaları tolere et)
                 if i + 1 < len(sorted_ids):
                     next_id = sorted_ids[i + 1]
 
-                    # Eğer iki bacak arasındaki ID farkı makul ise (max 5) eşleştir
                     if next_id - cid <= 5:
                         c1 = call_data[cid]
                         c2 = call_data[next_id]
@@ -95,7 +90,7 @@ def voice_traffic_analyzer():
                             router_time = c1['time']
                             full_timestamp = f"{date_today} {router_time}"
 
-                            # İki bacaktan biri bile CONNECTING ise durum CONNECTING yansır
+                            # İki bacaktan biri bile CONNECTING ise durum CONNECTING olur
                             final_status = "CONNECTING" if c1['status'] == "CONNECTING" or c2[
                                 'status'] == "CONNECTING" else "ACTIVE"
 
@@ -105,7 +100,6 @@ def voice_traffic_analyzer():
                         processed.add(cid)
                         processed.add(next_id)
 
-            # Rapor Sonu Özeti
             print("-" * len(header))
             print(f"TOPLAM AKTİF CEP ARAMASI: {call_count}")
             print("-" * len(header))
@@ -117,4 +111,5 @@ def voice_traffic_analyzer():
 if __name__ == "__main__":
 
     voice_traffic_analyzer()
+
 
