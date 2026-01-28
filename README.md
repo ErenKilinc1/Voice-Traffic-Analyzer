@@ -25,11 +25,13 @@ TARİH / SAAT         | DURUM        | ARAYAN (DAHİLİ)      | ARANAN CEP
 -----------------------------------------------------------------------
 TOPLAM AKTİF CEP ARAMASI: 4
 
+```
+
 
 ## Gereksinimler
 - Python 3.x
 - Cisco Gateway erişimi (SSH)
 ```bash
 pip install -r requirements.txt
-
+```
 
