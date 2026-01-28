@@ -5,9 +5,9 @@ from datetime import datetime
 # Cihaz Bilgileri
 cisco_cube = {
     'device_type': 'cisco_ios',
-    'host': '10.5.95.4',
-    'username': 'abdullah.kilinc',
-    'password': 'dynmox-X',
+    'host': 'ip_address',
+    'username': 'user.name',
+    'password': 'password',
 }
 
 def voice_traffic_analyzer():
@@ -115,4 +115,5 @@ def voice_traffic_analyzer():
 
 
 if __name__ == "__main__":
+
     voice_traffic_analyzer()
