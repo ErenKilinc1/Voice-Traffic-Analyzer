@@ -1,4 +1,4 @@
-# Cisco CUBE Active Voice Traffic Analyzer 🎙️
+# Cisco CUBE Active Voice Traffic Analyzer
 
 Bu proje, Cisco CUBE (Unified Border Element) üzerinden geçen aktif ses trafiğini gerçek zamanlı olarak analiz eden ve anlamlı bir rapor sunan Python tabanlı bir araçtır. 
 
