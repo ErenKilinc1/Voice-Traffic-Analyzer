@@ -29,8 +29,9 @@ TOPLAM AKTİF CEP ARAMASI: 4
 
 
 ## Gereksinimler
-- Python 3.x
-- Cisco Gateway erişimi (SSH)
+- **Python 3.x:** Projenin temel çalışma ortamı.
+- **Netmiko:** Cisco cihazlarına SSH üzerinden bağlanmak ve komut çalıştırmak için kullanılan kütüphane.
+- **Cisco Gateway Erişimi:** CUBE cihazına SSH erişim yetkisi olan bir kullanıcı hesabı.
 ```bash
 pip install -r requirements.txt
 ```
