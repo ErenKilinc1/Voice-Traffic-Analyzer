@@ -14,6 +14,7 @@ Bu proje, Cisco CUBE (Unified Border Element) üzerinden geçen aktif ses trafi�
 
 ## Örnek Çıktı
 
+```text
 --- 192.168.1.1 Gerçek Zamanlı Aktif Çağrı Raporu ---
 TARİH / SAAT         | DURUM        | ARAYAN (DAHİLİ)      | ARANAN CEP
 -----------------------------------------------------------------------
@@ -28,4 +29,7 @@ TOPLAM AKTİF CEP ARAMASI: 4
 ## Gereksinimler
 - Python 3.x
 - Cisco Gateway erişimi (SSH)
+```bash
+pip install -r requirements.txt
+
 
