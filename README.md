@@ -8,7 +8,7 @@ Bu proje, Cisco CUBE (Unified Border Element) üzerinden geçen aktif ses trafi�
 
 - **Akıllı Eşleştirme:** Call ID atlamalarını tolere ederek çağrı bacaklarını birbirine bağlar.
 - **Gerçek Zamanlı Durum:** Çağrıların `ACTIVE` (Görüşme devam ediyor) veya `CONNECTING` (Çalıyor) durumlarını anlık analiz eder.
-- **Router Zaman Damgası:** Python sistem saati yerine, Router üzerindeki gerçek çağrı başlangıç zamanını raporlar.
+- **Router Zaman Raporu:** Python sistem saati yerine, Router üzerindeki gerçek çağrı başlangıç zamanını raporlar.
 - **Otomatik Filtreleme:** Sadece cep telefonu aramalarını ayıklayarak karmaşık loglar arasında kaybolmanızı önler.
 - **Özet Rapor:** Listenin sonunda toplam aktif çağrı sayısını sunar.
 
@@ -35,4 +35,5 @@ TOPLAM AKTİF CEP ARAMASI: 4
 ```bash
 pip install -r requirements.txt
 ```
+
 
